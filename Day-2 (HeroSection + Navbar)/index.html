@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section + Navbar.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-200">
+
+    <header class="max-w-[1450px] mx-auto my-5 shadow-md shadow-gray-300 rounded-xl">
+        <!-- navbar  -->
+        <nav class="flex h-15 bg-white justify-between items-center p-10 rounded-xl ">
+            <!-- logo  -->
+            <div class="hover:scale-105 flex items-center gap-1 pb-2 shadow-xl rounded-[50%] p-2">
+                <span class="font-bold">DAY</span>
+                <div class="font-bold text-4xl flex justify-between">02</div>
+            </div>
+            <!-- nav-tags -->
+            <div class="gap-10 font-semibold text-gray-900 hidden md:flex">
+                <a href="#Home" class="hover:scale-105 hover:text-blue-400 hover:underline">Home</a>
+                <a href="#Contact" class="hover:scale-105 hover:text-blue-400 hover:underline" >Contact</a>
+                <a href="#Gmail" class="hover:scale-105 hover:text-blue-400 hover:underline">Gmail</a>
+                <a href="#About" class="hover:scale-105 hover:text-blue-400 hover:underline">About</a>
+            </div>
+            <!-- button  -->
+            <button class="bg-blue-700 px-10 py-2 text-white rounded-xl hover:scale-105 hover:shadow-md hover:shadow-blue-300 hidden md:block">SignIn</button>
+
+            <!-- hamburger -->
+             <div class=" block md:hidden text-gray-900 text-2xl">
+                <i class="fa-solid fa-list"></i>
+             </div>
+        </nav>
+        <!-- nav-bar ends here  -->
+    </header>
+
+    
+    <!-- Hero section starts here -->
+    <section class="max-w-[1550px] mx-auto bg-blue-500 p-10 md:flex">
+        <!-- hero-1  -->
+        <div class="px-4 text-white w-1/2">
+            <h1 class="text-2xl md:text-4xl font-bold py-8">MyPortfolio</h1>
+            <h2 class="text-3xl md:text-6xl font-semibold">Build Your Future as a Front-End Developer</h2>
+            <p class="md:text-xl my-10" >I’m learning HTML, CSS, JavaScript and Tailwind CSS. <br> Today I built this simple Hero Section using Tailwind utilities.</p>
+            <button class="bg-blue-700 px-10 py-2 text-white rounded-xl hover:scale-105 hover:shadow-md hover:shadow-blue-300 hidden md:block mt-20">View My Work</button>
+
+        </div>
+
+        <!-- right imagae -->
+        <div class="px-4 w-1/2 ">
+            <img src="img/ChatGPT Image Nov 22, 2025, 12_40_36 PM.png" class="rounded-4xl" alt="right_image">
+        </div>
+
+    </section>
+</body>
+</html>
