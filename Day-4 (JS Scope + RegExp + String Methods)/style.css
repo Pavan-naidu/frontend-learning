@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ebd6d6;
+  --muted: #2a2d33;
+  --green: #16a34a;
+  --red: #dc2626;
+  --accent: #2563eb;
+}
+
+
+.container{
+  display:flex;
+  gap:32px;
+  max-width:980px;
+  margin:48px auto;
+  padding:20px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.card{
+  background:var(--card);
+  border-radius:1rem;
+  padding:28px;
+  box-shadow: 0 6px 20px rgba(15,23,42,0.7);
+}
+
+.card p{color:var(--muted); }
+
+
+input[type="email"]{
+  padding:12px 14px;
+  border:1px solid #3d3e3f;
+  border-radius:1rem;
+  
+}
+
+
+button{
+  margin-left: 20px;
+  padding:10px 16px;
+  border:none;
+  border-radius:8px;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  font-size:15px;
+}
+
+
+.toast{
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  top:24px;
+  padding:12px 18px;
+  border-radius:1rem;
+  color:white;
+  font-weight:600;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.2);
+  z-index:9999;
+  transition: transform 200ms ease, opacity 200ms ease;
+  opacity:1;
+}
+
+.toast.hidden{
+  opacity:0;
+  pointer-events:none;
+  transform: translate(-50%, -12px) scale(0.98);
+}
+
+.toast.success{ background: linear-gradient(90deg, #10b981, #059669); }
+.toast.error{ background: linear-gradient(90deg, #ef4444, #dc2626); }
