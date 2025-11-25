@@ -4,7 +4,8 @@ const emailInput = document.getElementById('emailInput');
 const validateBtn = document.getElementById('validateBtn');
 const toast = document.getElementById('toast');
 
-const emailPattern = /^[\d\D\w\W0-9]+@[\D]+.[\D]+$/;
+const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,}$/;
+
 // const result = pattern.test(email);
 // console.log(result);
 
@@ -37,7 +38,7 @@ function validateEmail() {
 
   if (value === '') {
     showToast('Please enter an email address', 'error');
-    return;
+    return false;
   }
 
   const valid = emailPattern.test(value);
