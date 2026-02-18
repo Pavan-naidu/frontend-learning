@@ -1,0 +1,84 @@
+let userScore = 0;
+let compScore = 0;
+
+const user_score = document.querySelector("#user_score")
+const computer_score = document.querySelector("#computer_score")
+
+const choice = document.querySelectorAll(".choice");
+const result = document.querySelector("#result")
+
+const gencompuchoice = () => {
+    const options = ["stone", "paper", "scissor"]
+    const randomIdx = Math.floor(Math.random()*3)
+    return options[randomIdx];
+    
+}
+
+const DrawGame = () => {
+    console.log("Game was draw"); 
+    result.innerText = " Game Draw, Try Again"
+    result.style.backgroundColor =  "yellow"
+    result.style.color =  "black"
+}
+
+const showWinner = (userWin, userchoice, compuChoice) => {
+    if (userWin){
+        console.log("you win");
+        result.innerText = `you Win! ${userchoice} beats ${compuChoice} `
+        result.style.backgroundColor =  "green"
+        userScore++;
+        user_score.innerText = userScore
+    }
+    else{
+        console.log("you loose");
+        result.innerText = `you loose! ${compuChoice} beats ${userchoice} `
+        result.style.backgroundColor =  "red"
+        compScore++;
+        computer_score.innerText = compScore
+    }
+}
+
+const playGame = (userchoice) => {
+     console.log("User Choice was", userchoice);
+
+    const compuChoice = gencompuchoice();
+    console.log("computer choice was", compuChoice );
+    
+    if (userchoice === compuChoice){
+        DrawGame();
+    }
+    else{
+        let userwin = true;
+        if(userchoice === "rock"){
+            userwin = compuChoice === "paper" ? false : true;
+        }
+        else if (userchoice === "paper"){
+            userwin = compuChoice === "scissor" ? false : true ;
+        }
+        else{
+            userwin = compuChoice === "rock" ? false : true;
+        }
+        showWinner(userwin, userchoice, compuChoice);
+    }
+}
+
+
+choice.forEach((choice) => {
+    choice.addEventListener("click", () => {
+        const userchoice = choice.getAttribute("id")
+        playGame(userchoice);
+
+    })
+})
+
+const reset = document.querySelector("#reset");
+
+reset.addEventListener("click", () => {
+    userScore = 0;
+    compScore = 0;
+    user_score.innerText = userScore;
+    computer_score.innerText = compScore;
+
+})
+
+
