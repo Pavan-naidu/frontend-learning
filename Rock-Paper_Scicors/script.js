@@ -8,7 +8,7 @@ const choice = document.querySelectorAll(".choice");
 const result = document.querySelector("#result")
 
 const gencompuchoice = () => {
-    const options = ["stone", "paper", "scissor"]
+    const options = ["rock", "paper", "scissor"]
     const randomIdx = Math.floor(Math.random()*3)
     return options[randomIdx];
     
