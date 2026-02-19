@@ -47,7 +47,7 @@ const showWinner = (userWin, userchoice, compuChoice) => {
         result.innerText = `you loose! 
 
         ===>> your choice = ${userchoice}, Computer choice = ${compuChoice} <<===
-        
+
           ${compuChoice} beats ${userchoice} `
         result.style.backgroundColor =  "red"
         result.style.color =  "white"
@@ -96,7 +96,11 @@ reset.addEventListener("click", () => {
     compScore = 0;
     user_score.innerText = userScore;
     computer_score.innerText = compScore;
-
+    result.innerText = 'Select your Choice.'
+    result.style.backgroundColor = 'Black'
+    result.style. color = 'white'
+    
+    
 })
 
 
