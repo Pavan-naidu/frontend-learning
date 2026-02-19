@@ -41,10 +41,10 @@ img:hover{
     margin-top: 50px;
 }
 
-#user_score, #computer_score{
+#user_score, #computer_score, #draw_score{
     font-size: 5rem;
 }
-.user_score, .computer_score{
+.user_score, .computer_score, .draw{
     font-size: 2rem;
 }
 

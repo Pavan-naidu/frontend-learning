@@ -1,8 +1,10 @@
 let userScore = 0;
 let compScore = 0;
+let draw = 0;
 
 const user_score = document.querySelector("#user_score")
 const computer_score = document.querySelector("#computer_score")
+const draw_game = document.querySelector("#draw_score")
 
 const choice = document.querySelectorAll(".choice");
 const result = document.querySelector("#result")
@@ -16,9 +18,12 @@ const gencompuchoice = () => {
 
 const DrawGame = () => {
     console.log("Game was draw"); 
-    result.innerText = " Game Draw, Try Again"
+    result.innerText = `Game Draw!
+   ===>> Your choice = ${userchoice}, Computer Choice = ${compuChoice} Try Again`
     result.style.backgroundColor =  "yellow"
     result.style.color =  "black"
+    draw++
+    draw_game.innerText = draw;
 }
 
 const showWinner = (userWin, userchoice, compuChoice) => {
