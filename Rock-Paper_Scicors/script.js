@@ -16,16 +16,16 @@ const gencompuchoice = () => {
     
 }
 
-const DrawGame = () => {
+const DrawGame = (userchoice, compuChoice) => {
     console.log("Game was draw"); 
-    result.innerText = `Game Draw!
-
-   ===>> Your choice = ${userchoice}, Computer Choice = ${compuChoice};
-
-      Try Again`
-    result.style.backgroundColor =  "yellow"
-    result.style.color =  "black"
-    draw++
+    result.innerText = `Game draw, 
+    
+    ==>> Your choice = ${userchoice}, Computer choice = ${compuChoice} <<===
+    
+    Try again.`
+    result.style.backgroundColor =  "yellow";
+    result.style.color =  "black";
+    draw++;
     draw_game.innerText = draw;
 }
 
@@ -63,7 +63,7 @@ const playGame = (userchoice) => {
     console.log("computer choice was", compuChoice );
     
     if (userchoice === compuChoice){
-        DrawGame();
+        DrawGame(userchoice, compuChoice);
     }
     else{
         let userwin = true;
@@ -94,6 +94,8 @@ const reset = document.querySelector("#reset");
 reset.addEventListener("click", () => {
     userScore = 0;
     compScore = 0;
+    draw = 0;
+    draw_game.innerText = draw;
     user_score.innerText = userScore;
     computer_score.innerText = compScore;
     result.innerText = 'Select your Choice.'
