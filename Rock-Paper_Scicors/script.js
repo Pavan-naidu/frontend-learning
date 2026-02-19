@@ -19,7 +19,8 @@ const gencompuchoice = () => {
 const DrawGame = () => {
     console.log("Game was draw"); 
     result.innerText = `Game Draw!
-   ===>> Your choice = ${userchoice}, Computer Choice = ${compuChoice} Try Again`
+   ===>> Your choice = ${userchoice}, Computer Choice = ${compuChoice};
+      Try Again`
     result.style.backgroundColor =  "yellow"
     result.style.color =  "black"
     draw++
