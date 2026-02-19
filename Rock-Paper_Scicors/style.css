@@ -50,12 +50,12 @@ img:hover{
 
 .result{
     text-align: center;
-    margin-top: 100px;
+    margin: 50px 0;
 }
 #result{
     padding:0 20px;
     border-radius: 50px;
-    font-size: 2rem;
+    font-size: larger;
     background-color: black;
     color: aliceblue;
     display: inline ;
@@ -107,6 +107,7 @@ img:hover{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    margin-bottom: 100px;
 }
 #reset{
     padding: 5px 10px;

@@ -24,15 +24,21 @@ const DrawGame = () => {
 const showWinner = (userWin, userchoice, compuChoice) => {
     if (userWin){
         console.log("you win");
-        result.innerText = `you Win! ${userchoice} beats ${compuChoice} `
+        result.innerText = `you Win!  
+        ===>> your choice = ${userchoice}, Computer choice = ${compuChoice} <<=== 
+          ${userchoice} beats ${compuChoice} `
         result.style.backgroundColor =  "green"
+        result.style.color =  "white"
         userScore++;
         user_score.innerText = userScore
     }
     else{
         console.log("you loose");
-        result.innerText = `you loose! ${compuChoice} beats ${userchoice} `
+        result.innerText = `you loose! 
+        ===>> your choice = ${userchoice}, Computer choice = ${compuChoice} <<===
+          ${compuChoice} beats ${userchoice} `
         result.style.backgroundColor =  "red"
+        result.style.color =  "white"
         compScore++;
         computer_score.innerText = compScore
     }
