@@ -19,7 +19,9 @@ const gencompuchoice = () => {
 const DrawGame = () => {
     console.log("Game was draw"); 
     result.innerText = `Game Draw!
+
    ===>> Your choice = ${userchoice}, Computer Choice = ${compuChoice};
+
       Try Again`
     result.style.backgroundColor =  "yellow"
     result.style.color =  "black"
@@ -31,7 +33,9 @@ const showWinner = (userWin, userchoice, compuChoice) => {
     if (userWin){
         console.log("you win");
         result.innerText = `you Win!  
+
         ===>> your choice = ${userchoice}, Computer choice = ${compuChoice} <<=== 
+
           ${userchoice} beats ${compuChoice} `
         result.style.backgroundColor =  "green"
         result.style.color =  "white"
@@ -41,7 +45,9 @@ const showWinner = (userWin, userchoice, compuChoice) => {
     else{
         console.log("you loose");
         result.innerText = `you loose! 
+
         ===>> your choice = ${userchoice}, Computer choice = ${compuChoice} <<===
+        
           ${compuChoice} beats ${userchoice} `
         result.style.backgroundColor =  "red"
         result.style.color =  "white"
